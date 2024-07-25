@@ -1,0 +1,12 @@
+{
+    "name": "WhatsApp Auto Reply",
+    "dockerFile": "Dockerfile",
+    "extensions": [
+        "ms-python.python"
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "pip install -r requirements.txt",
+    "remoteUser": "vscode"
+}
