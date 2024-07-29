@@ -1,4 +1,5 @@
 import openai
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -7,8 +8,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-# Configuración de OpenAI
-openai.api_key = 'TU_CLAVE_DE_API_DE_OPENAI'
+# Configuración de OpenAI usando variable de entorno
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 # Función para obtener una respuesta de OpenAI
 def obtener_respuesta_de_openai(mensaje):
